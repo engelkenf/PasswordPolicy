@@ -6,6 +6,7 @@ public class PasswordPolicy {
         System.out.println("Das gewählte Passwort lautet: " + testPassWord);
         System.out.println("Ist das Password lang genug? " + checkPasswordLength(testPassWord));
         System.out.println("Enthält das Password Ziffern? " + checkPasswordContainsDigits(testPassWord));
+        System.out.println("Sind Großbuchstaben enthalten? " + checkPasswordContainsCapitalLetters(testPassWord));
 
 
     }
@@ -17,5 +18,9 @@ public class PasswordPolicy {
 
     public static boolean checkPasswordContainsDigits(String password){
         return password.matches(".*[0-9].*");
+    }
+
+    public static boolean checkPasswordContainsCapitalLetters(String password){
+        return password.matches(".*[A-Z].*");
     }
 }

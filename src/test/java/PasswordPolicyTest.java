@@ -34,5 +34,18 @@ public class PasswordPolicyTest {
         // THEN
         Assertions.assertTrue(passwordDigitCheckResult);
     }
+    @Test
+    @DisplayName("checkPasswordContainsCapitalLettersTest")
+    public void checkPasswordContainsCapitalLettersTest(){
 
+        // GIVEN
+        String passwordContainsCapitalLetters = "Test123!"; // happy path: it contains capital
+        String passwordWithoutCapitals = "hallo";           // negative path
+
+        // WHEN
+        boolean passwordCapitalLettersCheckResult = PasswordPolicy.checkPasswordContainsCapitalLetters(passwordContainsCapitalLetters);
+
+        // THEN
+        Assertions.assertTrue(passwordCapitalLettersCheckResult);
+    }
 }
