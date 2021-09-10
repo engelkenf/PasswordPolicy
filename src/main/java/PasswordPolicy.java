@@ -1,7 +1,7 @@
 public class PasswordPolicy {
     public static void main(String[] args){
 
-        String testPassWord = "Hallo";
+        String testPassWord = "Test123!";
 
         System.out.println("Das gewählte Passwort lautet: " + testPassWord);
         System.out.println("Ist das Password lang genug? " + checkPasswordLength(testPassWord));
